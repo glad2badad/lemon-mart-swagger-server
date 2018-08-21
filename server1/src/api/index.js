@@ -7,6 +7,9 @@ const logger = require('../lib/logger');
 const log = logger(config.logger);
 const app = express();
 
+var cors = require('cors')
+app.use(cors())
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
